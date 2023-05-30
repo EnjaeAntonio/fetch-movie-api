@@ -15,6 +15,22 @@
     {
         "name": "Nope",
         "img": "Nope.Jpg"
+    },
+    {
+        "name": "Us",
+        "img": "Us.jpg"
+    },
+    {
+        "name": "Wakanda Forever",
+        "img": "WakandaForever.jpg"
+    },
+    {
+        "name": "Heredtary",
+        "img": "Hereditary.jpg"
+    },
+    {
+        "name": "Dune",
+        "img": "Dune.Jpg"
     }
   ]
 }
