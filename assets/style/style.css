@@ -137,6 +137,7 @@ nav ul li + li {
     position: relative;
     justify-content: space-between;
     width: 100%;
+    gap: 20px;
 }
 
 .search {
@@ -146,10 +147,19 @@ nav ul li + li {
     position: relative;   
 }
 
-.search-city-positioning {
+.search-city-positioning,
+.search-movie-positioning {
     position: relative;
-    margin-left: 25%;
+}
 
+.search-city-positioning{
+    flex: 1; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-movie-positioning {
+    flex: 2; 
 }
 
 #search-movie,
