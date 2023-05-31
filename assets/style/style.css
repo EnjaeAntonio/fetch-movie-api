@@ -28,7 +28,8 @@ body {
 
 header {
     height: 56px;
-    background-color: var(--clr-primary);
+    background-color: rgba(255, 255, 255, 0.034);
+    margin-bottom: 40px;
     overflow: hidden;
 }
 
@@ -36,10 +37,17 @@ header {
     display: flex;
 }
 
+.hidden{
+    display: none;
+}
 
 /* ---------------------------------------------------- */
 /* Navigation Bar                                       */
 /* ---------------------------------------------------- */
+
+li{
+    list-style-type: none;
+}
 
 .title {
     width: 40%;
@@ -97,15 +105,107 @@ img {
     display: block;
     flex-grow: 1;
     height: auto;
-    width: calc(25% - 15px);
+    width: calc(15% - 15px);
     border-radius: 8px;
     transition: all .2s ease-in;
     border: 2px solid;
+    cursor: pointer;
 }
 
 img:hover {
     border: 2px solid var(--app-blue);
 }
+
+
+/* ---------------------------------------------------- */
+/* search bars                                          */
+/* ---------------------------------------------------- */
+
+.search-container{
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    position: relative;   
+}
+
+.search-city-positioning {
+    position: relative;
+}
+
+#search-movie,
+#search-city {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="search"] {
+    width: calc(100% - 60px); 
+    padding: 10px 60px 10px 12px; 
+    border: 1px solid rgba(255, 255, 255, 0.034);
+    background-color: rgba(255, 255, 255, 0.034);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    border-radius: 5px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px; 
+    top: 5px;
+    bottom: 5px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: var(--app-orange);
+    padding: 10px 15px 10px 15px;
+    border-radius: 2px; 
+    cursor: pointer;
+}
+
+.search-btn h1 {
+    font-size: .8rem;
+    color: #fff;
+    font-weight: 200;
+}
+
+#search-city{
+    margin-left: 25%;
+}
+
+.cities, .movies {
+    position: absolute;
+    width: auto;
+    z-index: 100;
+}
+.cities {
+    right: 32.5%;
+}
+
+.drop-down-bars{
+    background-color: var(--app-light-bg);
+    padding: 5px 10px 5px 10px;
+}
+
+.drop-down-bars:hover{
+    cursor: pointer;
+    background-color: var(--app-orange);
+}
+.list-cities{
+
+}
+.list-movies{
+
+}
+
 
 /* ---------------------------------------------------- */
 /* Media queries                                        */
