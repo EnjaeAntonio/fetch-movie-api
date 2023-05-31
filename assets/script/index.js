@@ -1,10 +1,9 @@
 'use strict';
 
-import { select, print, onEvent, create } from "./utils.js";
+import { select, onEvent, create } from "./utils.js";
 import cities from './cities.js';
 import movies from './movies.js';
-print(movies.movies);
-print(cities.cities);
+
 
 const movieUrl = './assets/script/movies.json';
 const getMoviesImg = select('.row');
@@ -54,32 +53,12 @@ arr.forEach(movie => {
 });
 
 if(movieList.children.length === 0) {
-    movieList.innerHTML = `<li class="list-movies drop-down-bars">Movie not found</li>`;
+    movieList.innerHTML = `<li class="disable-dropdown">Movie not found</li>`;
     movieList.classList.remove("hidden");
 } else {
     movieList.classList.remove("hidden");
 }
 }
-
-async function getMovies(){
-    try{
-        const response = await fetch(movieUrl);
-        if(!response.ok){
-            throw new Error (`${response.statusText} (${response.status})`)
-        }
-
-        const data = await response.json();
-        print(data.movies);
-        listMoviesRowOne(data.movies);
-    }catch (error){
-        print(error.message);
-    }
-}
-
-function getLocation(position){
-    const { longitude, latitude } = position.coords;
-};
-
 
 
 function listCities(arr){
@@ -104,28 +83,13 @@ function listCities(arr){
   });
 
   if(list.children.length === 0) {
-      list.innerHTML = `<li class="drop-down-bars">Cities not found</li>`;
+      list.innerHTML = `<li class="disable-dropdown">Cities not found</li>`;
       list.classList.remove("hidden");
   } else {
       list.classList.remove("hidden");
   }
 }
 
-async function getCities(){
-  try{
-      const response = await fetch(url);
-
-      if(!response.ok){
-          throw new Error (`${response.statusText} (${response.status})`)
-      }
-
-      const data = await response.json();
-      print(data.cities);
-      listCities(data.cities);
-  }catch (error){
-      print(error.message);
-  }
-}
 
 searchMovie.addEventListener("input", function() {
   listMovies(movies.movies);
@@ -138,6 +102,3 @@ searchCity.addEventListener("input", function() {
 listMovies(movies.movies);
 getMovieImages(movies.movies);
 listCities(cities.cities);
-getMovies();
-getCities();
-
