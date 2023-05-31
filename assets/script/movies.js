@@ -1,7 +1,7 @@
 export default {  
     "movies": [
     {
-      "name": "The Batman",
+      "name": "The Batman ",
       "img": "batman.jpg"
     },
     {

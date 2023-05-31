@@ -21,16 +21,17 @@ body {
 .row {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 20px;
-    padding: 10px 0 20px 0;
+    margin-top: 30px;
 }
 
 
 header {
     height: 56px;
     background-color: rgba(255, 255, 255, 0.034);
-    margin-bottom: 40px;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .flexbox {
@@ -57,11 +58,11 @@ li{
 
 .title h1 {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     color: #fff;
     line-height: 56px;
     text-transform: uppercase;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.4px;
 }
 
 nav {
@@ -80,16 +81,16 @@ nav ul li{
 }
 
 nav ul li a {
-    font-size: 19px;
+    font-size: 16px;
     letter-spacing: 1px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     cursor: pointer;
 }
 
 nav ul li a:hover {
-    text-decoration: underline #fff;
+    color: var(--app-orange);
 
 }
 
@@ -101,20 +102,41 @@ nav ul li + li {
     color: var(--app-orange);
 }
 
-img {
-    display: block;
-    flex-grow: 1;
-    height: auto;
-    width: calc(15% - 15px);
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(15% - 20px);
     border-radius: 8px;
-    transition: all .2s ease-in;
-    border: 2px solid;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-img:hover {
-    border: 2px solid var(--app-blue);
+
+
+.movie-item img {
+    display: block;
+    width: auto;
+    height: 250px;
+    border: 1px solid var(--app-dark-bg);
 }
+
+.movie-item img:hover {
+    border: 1px solid var(--app-orange);
+}
+
+.movie-item p {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 2px;
+}
+
 
 
 /* ---------------------------------------------------- */
@@ -136,6 +158,8 @@ img:hover {
 
 .search-city-positioning {
     position: relative;
+    margin-left: 25%;
+
 }
 
 #search-movie,
@@ -178,61 +202,72 @@ input[type="search"] {
 }
 
 #search-city{
-    margin-left: 25%;
 }
 
 .cities, .movies {
     position: absolute;
-    width: auto;
-    z-index: 100;
+    text-align: left;
 }
 .cities {
-    right: 32.5%;
+    top: 45px;
 }
 
 .drop-down-bars{
     background-color: var(--app-light-bg);
     padding: 5px 10px 5px 10px;
+    width: 300px;
 }
 
 .drop-down-bars:hover{
     cursor: pointer;
     background-color: var(--app-orange);
 }
-.list-cities{
 
-}
-.list-movies{
-
-}
 
 
 /* ---------------------------------------------------- */
 /* Media queries                                        */
 /* ---------------------------------------------------- */
 
-/* 768px and down */
-
-@media (max-width: 830px) {
-    img {
-        width: calc(50% - 10px);
+@media (max-width: 890px) {
+    .movie-item {
+        width: calc(25% - 15px);
     }
-
 
 }
 
-@media (max-width: 560px) {
+@media (max-width: 680px) {
+    nav ul li{
+        display: none;
+    }
+    .title h1 {
+        width: 100%;
+    }
+    .movie-item {
+        width: calc(50% - 15px);
+    }
+    .movie-item img {
+        height: 400px;
+      }    
+      .movie-item p{
+        font-size: 1.1rem;
+      }
     .title{
         width: 35%;
     }
 }
 
-/* 480px and down */
-
 @media (max-width: 480px) {
-    img {
+    .movie-item {
         width: 100%;
     }
-
+    .movie-item img {
+        height: 400px;
+      }
+      .movie-item p{
+        font-size: 1.2rem;
+      }
 }
+
+
 

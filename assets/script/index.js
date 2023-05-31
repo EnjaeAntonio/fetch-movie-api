@@ -21,7 +21,10 @@ function getMovieImages(arr) {
   
     if (arr.length > 0) {
       arr.forEach(movie => {
-        movies += `<img src="./assets/img/${movie.img}" alt="${movie.name}">`;
+        movies += `<div class="movie-item">
+                      <img src="./assets/img/${movie.img}" alt="${movie.name}">
+                      <p>${movie.name}</p>
+                   </div>`;
       });
     } else {
       movies += `<picture><h1>Movies not found<h1></picture>`;
@@ -29,32 +32,33 @@ function getMovieImages(arr) {
   
     getMoviesImg.innerHTML = movies;
   }
-  function listMovies(arr) {
+
+function listMovies(arr) {
     movieList.innerHTML = '';
     if (searchMovie.value.trim() === '') {
         movieList.classList.add("hidden");
         return;
-    }
+}
 
-    arr.forEach(movie => {
-        if(movie.name.toLowerCase().includes(searchMovie.value.toLowerCase())) {
-            const movieListItem = create('li');
-            movieListItem.textContent = movie.name;
-            movieListItem.classList.add("list-movies", "drop-down-bars");
-            onEvent('click', movieListItem, () => {
-                searchMovie.value = movie.name;
-                movieList.classList.add('hidden');
-            });
-            movieList.appendChild(movieListItem);
-        }
-    });
-
-    if(movieList.children.length === 0) {
-        movieList.innerHTML = `<li class="list-movies drop-down-bars">Movie not found</li>`;
-        movieList.classList.remove("hidden");
-    } else {
-        movieList.classList.remove("hidden");
+arr.forEach(movie => {
+    if(movie.name.toLowerCase().includes(searchMovie.value.toLowerCase())) {
+        const movieListItem = create('li');
+        movieListItem.textContent = movie.name;
+        movieListItem.classList.add("drop-down-bars");
+        onEvent('click', movieListItem, () => {
+            searchMovie.value = movie.name;
+            movieList.classList.add('hidden');
+        });
+        movieList.appendChild(movieListItem);
     }
+});
+
+if(movieList.children.length === 0) {
+    movieList.innerHTML = `<li class="list-movies drop-down-bars">Movie not found</li>`;
+    movieList.classList.remove("hidden");
+} else {
+    movieList.classList.remove("hidden");
+}
 }
 
 async function getMovies(){
@@ -72,6 +76,12 @@ async function getMovies(){
     }
 }
 
+function getLocation(position){
+    const { longitude, latitude } = position.coords;
+};
+
+
+
 function listCities(arr){
   list.innerHTML = '';
   
@@ -84,7 +94,7 @@ function listCities(arr){
       if(city.name.toLowerCase().includes(searchCity.value.toLowerCase())){
           const cityListItem = create('li');
           cityListItem.textContent = city.name;
-          cityListItem.classList.add("list-cities", "drop-down-bars");
+          cityListItem.classList.add("drop-down-bars");
           onEvent('click', cityListItem, () => {
               searchCity.value = city.name;
               list.classList.add('hidden');
@@ -94,7 +104,7 @@ function listCities(arr){
   });
 
   if(list.children.length === 0) {
-      list.innerHTML = `<li class="list-cities drop-down-bars">Cities not found</li>`;
+      list.innerHTML = `<li class="drop-down-bars">Cities not found</li>`;
       list.classList.remove("hidden");
   } else {
       list.classList.remove("hidden");
