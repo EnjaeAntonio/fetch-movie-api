@@ -4,7 +4,6 @@ import { select, onEvent, create } from "./utils.js";
 import cities from './cities.js';
 import movies from './movies.js';
 
-
 const movieUrl = './assets/script/movies.json';
 const getMoviesImg = select('.row');
 const searchCity = select('#search-city');
@@ -15,9 +14,8 @@ const url = './assets/script/cities.json';
 
 function getMovieImages(arr) {
     getMoviesImg.innerHTML = '';
-
     let movies = '';
-  
+
     if (arr.length > 0) {
       arr.forEach(movie => {
         movies += `<div class="movie-item">
@@ -28,7 +26,6 @@ function getMovieImages(arr) {
     } else {
       movies += `<picture><h1>Movies not found<h1></picture>`;
     }
-  
     getMoviesImg.innerHTML = movies;
   }
 
