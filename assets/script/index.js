@@ -19,7 +19,7 @@ function getMovieImages(arr) {
     if (arr.length > 0) {
       arr.forEach(movie => {
         movies += `<div class="movie-item">
-                      <img src="./assets/img/${movie.img}" alt="${movie.name}">
+                      <img src="${movie.img}" alt="${movie.name}">
                       <p>${movie.name}</p>
                    </div>`;
       });

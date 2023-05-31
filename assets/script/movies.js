@@ -2,75 +2,75 @@ export default {
     "movies": [
     {
       "name": "The Batman ",
-      "img": "batman.jpg"
+      "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-batman.jpg"
     },
     {
-        "name": "Avengers: Endgame",
-        "img": "EndGame.webp"
+        "name": "Avengers: Infinity War",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/avengers-infinity-war.jpg"
     },
     {
-        "name": "FightClub",
-        "img": "FightClub.jpg"
+        "name": "The Flash",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-flash.jpg"
     },
     {
-        "name": "Nope",
-        "img": "Nope.Jpg"
+        "name": "The Grand Budapest Hotel",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-grand-budapest-hotel.jpg"
     },
     {
-        "name": "Us",
-        "img": "Us.jpg"
+        "name": "The Matrix",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-matrix.jpg"
     },
     {
-        "name": "Wakanda Forever",
-        "img": "WakandaForever.jpg"
+        "name": "The Shining",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-shining.jpg"
     },
     {
-        "name": "Heredtary",
-        "img": "Hereditary.jpg"
+        "name": "The Exorcist",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-exorcist.jpg"
     },
     {
-        "name": "Dune",
-        "img": "Dune.Jpg"
+        "name": "The Godfather",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-godfather.jpg"
     },
     {
-        "name": "Interstellar",
-        "img": "Interstellar.Jpg"
+        "name": "Star Wars: Revenge of the Sith",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/revenge-of-the-sith.jpg"
     },
     {
-        "name": "Bullet Train",
-        "img": "BulletTrain.Jpg"
+        "name": "Oceans Eleven",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/oceans-eleven.jpg"
     },
     {
-        "name": "Barbarian",
-        "img": "Barbarian.Jpg"
+        "name": "Jurassic Park",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/jurassic-park.jpg"
     },
     {
-        "name": "Midsommar",
-        "img": "Midsommar.png"
+        "name": "Eternals",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/eternals.jpg"
     },
     {
-        "name": "Fast X",
-        "img": "FastX.webp"
+        "name": "No Time To Die",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/no-time-to-die.jpg"
     },
     {
-        "name": "Avengers Infinity War",
-        "img": "Avengers_Infinity_War.Jpg"
+        "name": "Robocop",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/robocop.jpg"
     },
     {
-        "name": "Guardians of the Galaxy Vol. 3",
-        "img": "Guardians_of_the_Galaxy_vol._3.Jpg"
+        "name": "Titanic",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/titanic.jpg"
     },
     {
-        "name": "Iron Man",
-        "img": "Iron_Man.Jpg"
+        "name": "The Lion King",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-lion-king.jpg"
     },
     {
-        "name": "Spiderman: Into The Spider-Verse",
-        "img": "SpiderManIntoTheSpiderVerse.Jpg"
+        "name": "The Others",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-others.jpg"
     },
     {
-        "name": "The Suicide Squad",
-        "img": "The_Suicide_Squad.jpg"
+        "name": "My Cousin Vinny",
+        "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/my-cousin-vinny.jpg"
     },
   ]
 }
