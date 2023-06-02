@@ -13,14 +13,6 @@ body {
     margin-inline: auto;
 }
 
-.row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
 .flexbox {
     display: flex;
 }
@@ -96,21 +88,25 @@ nav ul li + li {
     color: var(--app-orange);
 }
 
+.row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(calc(15% - 15px), 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
 .movie-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: calc(15% - 15px);
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 10px;
 }
+
 
 .movie-item img {
     display: block;
     width: auto;
-    height: 250px;
     border: 1px solid var(--app-dark-bg);
 }
 

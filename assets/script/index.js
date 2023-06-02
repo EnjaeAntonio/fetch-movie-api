@@ -57,7 +57,6 @@ if(movieList.children.length === 0) {
 }
 }
 
-
 function listCities(arr){
   list.innerHTML = '';
   
@@ -86,7 +85,6 @@ function listCities(arr){
       list.classList.remove("hidden");
   }
 }
-
 
 searchMovie.addEventListener("input", function() {
   listMovies(movies.movies);
